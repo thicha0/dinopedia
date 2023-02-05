@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dinopedia</title>
+    <link rel="icon" type="image/x-icon" href="/dino.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        Welcome to
+        <h1>Dinopedia</h1>
+    </header>
+    <div class="search">
+        Search for a dinosaur:<br>
+        <input id="autocomplete">
+        <button class="btn-search">Search</button>
+        <button class="btn-random">Random</button>
+    </div>
+
+    <div class="content">
+        <div class="loading">
+            <img src="walking-t-rex.gif" />
+            <br>
+            <span class="loading-text"></span>
+        </div>
+        
+        <div class="current-dino">
+            <!-- Display dino infos here -->
+            <h2 class="name"></h2>
+            <p class="description"></p>
+        </div>
+    </div>
+    
+    <img class="left-jungle" src="left-jungle.png" />
+    <img class="right-jungle" src="right-jungle.png" />
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

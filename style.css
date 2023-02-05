@@ -1,0 +1,53 @@
+/* 
+    Palette
+    #135E46
+    #478966
+    #73A788
+    #E3C6AD
+    #D09D7B
+    #B67B65
+*/
+
+body {
+    background-color: #73A788;
+    text-align: center;
+    align-items: center;
+}
+
+.left-jungle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-height: 90%;
+    max-width: 30%;
+    opacity: 0.3;
+}
+
+.right-jungle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    max-width: 30%;
+    opacity: 0.3;
+}
+
+.content {
+    position: relative;
+}
+
+.loading {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    opacity: 0;
+    transition: all .3s;
+}
+
+.current-dino {
+    transition: all .1s;
+}
