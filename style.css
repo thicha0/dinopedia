@@ -8,10 +8,27 @@
     #B67B65
 */
 
+@font-face {
+    font-family: DinosaurAlt;
+    src: url('/assets/fonts/DinosaurAlt-YzvB4.ttf');
+}
+
+@font-face {
+    font-family: Khorla;
+    src: url('/assets/fonts/Khorla.ttf');
+}
+
 body {
     background-color: #73A788;
     text-align: center;
     align-items: center;
+    color: #185844;
+    font-family: Khorla, sans-serif;
+}
+
+header h1 {
+    font-size: 4em;
+    font-family: DinosaurAlt;
 }
 
 .left-jungle {
@@ -34,6 +51,7 @@ body {
 
 .content {
     position: relative;
+    margin-top: 50px;
 }
 
 .loading {
@@ -50,4 +68,41 @@ body {
 
 .current-dino {
     transition: all .1s;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+}
+
+#autocomplete {
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #cce2c7;
+    font-family: Khorla;
+    color: #135E46;
+}
+
+#autocomplete:focus {
+    outline: none;
+    box-shadow: 0 0 10px #B67B65;
+}
+
+button {
+    margin: 0 3px;
+    padding: 6px;
+    border-radius: 5px;
+    border: none;
+    line-height: 100%;
+    cursor: pointer;
+    background-color: #E3C6AD;
+    border: 2px solid #654438;
+    display: flex;
+    justify-content: center;
+}
+
+button:hover {
+    box-shadow: 0 0 10px #B67B65;
 }
