@@ -99,15 +99,16 @@ header h1 {
 #autocomplete-list {
     position: absolute;
     display: none;
-    border: 2px solid #654438;
     color: #654438;
     padding: 0;
     margin: 0 10px;
     list-style-type: none;
     z-index: 100;
-    border-radius: 0 0 5px 5px;
-    background-color: #E3C6AD;
-    width: 89%;
+    border-radius: 1px;
+    background-color: #cce2c7;
+    width: 90%;
+    margin-top: 5px;
+    box-shadow: 0 0 10px #B67B65;
 }
 
 #autocomplete-list li {
@@ -116,7 +117,7 @@ header h1 {
 }
 
 #autocomplete-list li:hover {
-    background-color: #b59286;
+    background-color: #E3C6AD;
 }
 
 button {

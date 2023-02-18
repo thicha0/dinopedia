@@ -37,7 +37,8 @@ let loadingTexts = [
     'Retrieving fossils...',
     'Time travelling...',
     'Analysing DNA...',
-    'Searching the Mesozoic'
+    'Searching the Mesozoic...',
+    'Setting up traps...',
 ]
 function showLoading() {
     const randomIndex = Math.floor(Math.random() * loadingTexts.length)
@@ -73,6 +74,12 @@ searchInput.addEventListener('input', () => {
   displayAutocompleteList(matchingItems)
 })
 
+searchInput.addEventListener('blur', () => {
+    setTimeout(() => {
+        autocompleteList.style.display = 'none'
+    }, 100)
+})
+
 function displayAutocompleteList(items) {
   autocompleteList.innerHTML = ''
   if (items.length === 0) {
@@ -83,8 +90,9 @@ function displayAutocompleteList(items) {
     const li = document.createElement('li')
     li.textContent = item
     li.addEventListener('click', () => {
-      searchInput.value = item
-      autocompleteList.style.display = 'none'
+        searchInput.value = item
+        autocompleteList.style.display = 'none'
+        searchDino()
     })
     autocompleteList.appendChild(li)
   })
@@ -93,7 +101,22 @@ function displayAutocompleteList(items) {
 
 btnSearch.addEventListener('click', searchDino)
 
+searchInput.addEventListener('keyup', function(event) {
+  if (event.key === 'Enter') {
+    searchInput.blur()
+    searchDino()
+  }
+})
+
 async function searchDino() {
-    selectedDino = dinolist.find(dino => dino.Name === searchInput.value)
+    const match = dinolist.find(dino => dino.Name === searchInput.value)
+    if (match) {
+        selectedDino = match
+    } else {
+        selectedDino = {
+            Name: searchInput.value,
+            Description: '🦴 This dinosaur has not been found yet ! 🦴'
+        }
+    }
     showLoading()
 }

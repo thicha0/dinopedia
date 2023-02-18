@@ -2,10 +2,6 @@
 
 Encyclopedia of Dinosaurs
 
-## TODO
-- Search autocomplete
-- Add ChatGPT API / Other infos
-
 ## Sources
 - Dinosaur list from https://dinosaur-facts-api.shultzlab.com
 - Loading T-rex made with https://www.piskelapp.com/
