@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Dinopedia</title>
-    <link rel="icon" type="image/x-icon" href="/dino.ico">
+    <link rel="icon" type="image/x-icon" href="/diplodocus.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Dinopedia</h1>
         <div class="search">
-            <input id="autocomplete" placeholder="Search a dinosaur...">
+            <div style="position: relative;">
+                <input id="autocomplete" placeholder="Search a dinosaur...">
+                <ul id="autocomplete-list"></ul>
+            </div>
             <button class="btn-search">
                 <img src="assets/icons/search-icon.svg" height="20px" />
             </button>

@@ -20,3 +20,5 @@ Encyclopedia of Dinosaurs
 
 - Icon random: https://uxwing.com/random-icon/
 - Icon search: https://uxwing.com/search-icon/
+
+- X-icon: https://www.flaticon.com/free-icon/diplodocus_145302

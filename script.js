@@ -58,3 +58,42 @@ function showDino() {
         dinoInfos.querySelector('.description').innerHTML = selectedDino.Description
     }, 300)
 }
+
+const searchInput = document.getElementById('autocomplete')
+const autocompleteList = document.getElementById('autocomplete-list')
+
+const items = dinolist.map(dino => dino.Name)
+
+searchInput.addEventListener('input', () => {
+  const searchTerm = searchInput.value
+  let matchingItems = []
+  if (searchTerm) {
+      matchingItems = items.filter(item => item.toLowerCase().startsWith(searchTerm.toLowerCase())).slice(0,5)
+  }
+  displayAutocompleteList(matchingItems)
+})
+
+function displayAutocompleteList(items) {
+  autocompleteList.innerHTML = ''
+  if (items.length === 0) {
+    autocompleteList.style.display = 'none'
+    return
+  }
+  items.forEach(item => {
+    const li = document.createElement('li')
+    li.textContent = item
+    li.addEventListener('click', () => {
+      searchInput.value = item
+      autocompleteList.style.display = 'none'
+    })
+    autocompleteList.appendChild(li)
+  })
+  autocompleteList.style.display = 'block'
+}
+
+btnSearch.addEventListener('click', searchDino)
+
+async function searchDino() {
+    selectedDino = dinolist.find(dino => dino.Name === searchInput.value)
+    showLoading()
+}
