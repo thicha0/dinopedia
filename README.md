@@ -4,7 +4,6 @@ Encyclopedia of Dinosaurs
 
 ## TODO
 - Search autocomplete
-- Green color for gif
 - Add ChatGPT API / Other infos
 
 ## Sources

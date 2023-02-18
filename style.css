@@ -68,6 +68,12 @@ header h1 {
 
 .current-dino {
     transition: all .1s;
+    position: absolute;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
 }
 
 .search {

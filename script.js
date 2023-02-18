@@ -32,7 +32,13 @@ async function selectRandomDino() {
 
 const loading = document.querySelector('.loading')
 const loadingText = document.querySelector('.loading-text')
-let loadingTexts = ['Hunting dinosaurs...', 'Retrieving fossils...', 'Time travelling...']
+let loadingTexts = [
+    'Hunting dinosaurs...',
+    'Retrieving fossils...',
+    'Time travelling...',
+    'Analysing DNA...',
+    'Searching the Mesozoic'
+]
 function showLoading() {
     const randomIndex = Math.floor(Math.random() * loadingTexts.length)
     loadingText.textContent = loadingTexts[randomIndex]
