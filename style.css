@@ -18,6 +18,10 @@
     src: url('/assets/fonts/Khorla.ttf');
 }
 
+::selection {
+    background-color: #D09D7B;
+}
+
 body {
     background-color: #73A788;
     text-align: center;
